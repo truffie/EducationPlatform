@@ -75,6 +75,8 @@ const deleteCourseDB = async (id: number) => {
   } catch (error: any) {
     await client.query("ROLLBACK");
     return error.message;
+  } finally {
+    client.release();
   }
 };
 export { getAllCoursesDB, createCourseDB, getCourseByNameDB, getCourseByIdDB, updateCourseDB, deleteCourseDB };
