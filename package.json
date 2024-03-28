@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest user.controller.test.ts --forceExit",
     "start:dev": "nodemon index",
     "format": "prettier --write .",
     "lint": "eslint --ext .ts src/"
@@ -30,6 +30,7 @@
     "nodemon": "^3.1.0",
     "pg": "^8.11.3",
     "prettier": "^3.2.5",
+    "supertest": "^6.3.4",
     "ts-jest": "^29.1.2",
     "ts-node": "^10.9.2"
   },
@@ -38,6 +39,7 @@
     "@types/cors": "^2.8.17",
     "@types/jsonwebtoken": "^9.0.6",
     "@types/pg": "^8.11.2",
+    "@types/supertest": "^6.0.2",
     "typescript": "^5.3.3"
   }
 }
