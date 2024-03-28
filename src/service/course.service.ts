@@ -13,6 +13,8 @@ const getCourseById = async (id: number): Promise<iCourse[]> => {
 };
 
 const createCourse = async (course: string, description: string): Promise<iCourse[]> => {
+  if (!course.length) throw new Error("empty course name");
+  if (!description.length) throw new Error("empty description name");
   const findCourse: iCourse[] = await getCourseByNameDB(course);
   if (findCourse.length) throw new Error("course already exists");
   const newCourse: iCourse[] = await createCourseDB(course, description);
@@ -20,6 +22,8 @@ const createCourse = async (course: string, description: string): Promise<iCours
 };
 
 const updateCourse = async (id: number, body: iCourse): Promise<iCourse[]> => {
+  if (!body.course.length) throw new Error("empty course name");
+  if (!body.description.length) throw new Error("empty description name");
   const findCourse = await getCourseByIdDB(id);
   if (!findCourse.length) throw new Error("invalid course id");
 
