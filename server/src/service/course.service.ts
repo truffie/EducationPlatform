@@ -22,13 +22,18 @@ const createCourse = async (course: string, description: string): Promise<iCours
 };
 
 const updateCourse = async (id: number, body: iCourse): Promise<iCourse[]> => {
-  if (!body.course.length) throw new Error("empty course name");
-  if (!body.description.length) throw new Error("empty description name");
   const findCourse = await getCourseByIdDB(id);
   if (!findCourse.length) throw new Error("invalid course id");
-
+  if (!body.course?.length) {
+    body.course = findCourse[0].course;
+  }
   const findCourseName = await getCourseByNameDB(body.course);
-  if (findCourseName.length && findCourseName[0].id !== findCourse[0]) throw new Error("course already exists");
+
+  if (findCourseName.length && findCourseName[0].id !== findCourse[0].id) throw new Error("course already exists");
+
+  if (!body.description?.length) {
+    body.description = findCourse[0].description;
+  }
   const course = { ...findCourse[0], ...body };
   const updatedCourse = await updateCourseDB(id, course.course, course.description);
   if (!updatedCourse.length) throw new Error("empty data");
@@ -38,7 +43,6 @@ const updateCourse = async (id: number, body: iCourse): Promise<iCourse[]> => {
 const deleteCourse = async (id: number): Promise<iCourse[]> => {
   const findCourse = await getCourseByIdDB(id);
   if (!findCourse.length) throw new Error("invalid course id");
-
   const deletedCourse = await deleteCourseDB(id);
 
   return deletedCourse;

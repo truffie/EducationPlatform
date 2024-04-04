@@ -8,8 +8,8 @@ interface iUser {
 
 interface iCourse {
   readonly id?: number;
-  readonly course?: string;
-  readonly description?: string;
+  course?: string;
+  description?: string;
 }
 
 export { iUser, iCourse };

@@ -9,6 +9,8 @@ const getAllCoursesDB = async (): Promise<iCourse[]> => {
     return rows;
   } catch (error: any) {
     return error.message;
+  } finally {
+    client.release();
   }
 };
 const createCourseDB = async (course: string, description: string): Promise<iCourse[]> => {
@@ -35,6 +37,8 @@ const getCourseByNameDB = async (course: string): Promise<iCourse[]> => {
     return rows;
   } catch (error: any) {
     return error.message;
+  } finally {
+    client.release();
   }
 };
 
@@ -46,6 +50,8 @@ const getCourseByIdDB = async (id: number): Promise<iCourse[]> => {
     return rows;
   } catch (error: any) {
     return error.message;
+  } finally {
+    client.release();
   }
 };
 

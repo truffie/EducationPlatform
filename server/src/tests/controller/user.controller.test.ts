@@ -13,7 +13,6 @@ describe("test user controller", () => {
   });
   test("GET/user", async () => {
     const res = await req(app).get(`/user/`);
-    console.log(res.body);
     expect(res.statusCode).toBe(200);
   });
   test("DELETE/user", async () => {
