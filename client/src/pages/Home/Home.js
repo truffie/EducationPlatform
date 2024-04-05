@@ -3,7 +3,7 @@ import styles from "./Home.module.css";
 function Home() {
   return (
     <>
-      <header className={`${styles.bgColored} ${styles.lineAccent}`}>
+      <header className={`${styles.bgColored} ${styles.lineAccent} ${styles.header}`}>
         <div className={`${styles.headerWrapper} ${"wrapper"} ${styles.layout2Columns}`}>
           <p className={styles.logo}>Hschool</p>
           <div>
@@ -17,7 +17,9 @@ function Home() {
           <div className={styles.Content}>
             <p className={styles.primaryColored}>E-COURSE PLATFORM</p>
             <div className={styles.ContentText}>
-              <h1 className={styles.ContentHeader}>Learning and teaching online, made easy.</h1>
+              <h1 className={`${styles.ContentHeader} ${styles.mainHeader}`}>
+                Learning and teaching online, made easy.
+              </h1>
               <p className={styles.ContentSubtitle}>Any subject, in any language, on any device, for all ages!</p>
             </div>
             <button className={`${styles.button} ${styles.primaryColored}`}>About platform</button>
@@ -47,7 +49,7 @@ function Home() {
         </div>
       </section>
       <section className={`${styles.textbook} ${styles.bgColored}`}>
-      <div className={` ${styles.sectionWrapper} ${"wrapper"}`}>
+        <div className={` ${styles.sectionWrapper} ${"wrapper"}`}>
           <div className={styles.Content}>
             <div className={styles.ContentText}>
               <h2 className={styles.ContentHeader}>Increase your knowledge</h2>
@@ -56,11 +58,11 @@ function Home() {
             <button className={`${styles.button} ${styles.primaryColored}`}>Textbook →</button>
           </div>
           <div className={styles.textbookImg}></div>
-       </div>
+        </div>
       </section>
       <section className={styles.statistic}>
-      <div className={` ${styles.sectionWrapper} ${"wrapper"}`}>
-      <div className={styles.statisticImg}></div>
+        <div className={` ${styles.sectionWrapper} ${"wrapper"}`}>
+          <div className={styles.statisticImg}></div>
           <div className={styles.Content}>
             <div className={styles.ContentText}>
               <h2 className={styles.ContentHeader}>Watch your progress every day</h2>
@@ -68,12 +70,12 @@ function Home() {
             </div>
             <button className={`${styles.button} ${styles.primaryColored}`}>Statistics →</button>
           </div>
-       </div>
+        </div>
       </section>
       <footer className={styles.bgColored}>
-      <div className={"wrapper"}>
-         <div className={`${styles.footerTop} ${styles.layout2Columns} ${styles.lineAccent}`}>
-            <nav >
+        <div className={"wrapper"}>
+          <div className={`${styles.footerTop} ${styles.layout2Columns} ${styles.lineAccent}`}>
+            <nav>
               <ul>
                 <li>Home</li>
                 <li>Textbook</li>
@@ -86,16 +88,18 @@ function Home() {
               <p>Gabriel</p>
               <p>Marcus</p>
             </div>
-         </div>
-        <div className={`${styles.footerBottom} ${styles.layout2Columns} `}>
-          <div>
-            <div className={styles.githubIco}></div>
-            <div className={styles.gtIco}></div>
-            <div className={styles.youtubeIco}></div>
           </div>
-          <p>©2021 Hschool. Project for <span>Hschool</span>.</p>
+          <div className={`${styles.footerBottom} ${styles.layout2Columns} `}>
+            <div>
+              <div className={styles.githubIco}></div>
+              <div className={styles.gtIco}></div>
+              <div className={styles.youtubeIco}></div>
+            </div>
+            <p>
+              ©2021 Hschool. Project for <span>Hschool</span>.
+            </p>
+          </div>
         </div>
-      </div>
       </footer>
     </>
   );
