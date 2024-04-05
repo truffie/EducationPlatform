@@ -1,14 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
+:root{
+  --accent: #E0E0E0;
+  --primary: #2B788B;
+  --secondaryBG: #F2D4DC;
+  --secondary: #945069;
+  --secondaryText: #757575;
+}
+
 /* Firefox (uncomment to work in Firefox, although other properties will not work!)  */
 /** {
   scrollbar-width: thin;
   scrollbar-color: #8A8A8A #DFE9EB;
 }*/
 
-/* Chrome, Edge and Safari */
-
-  
 * {
     margin: 0;
     padding: 0;
