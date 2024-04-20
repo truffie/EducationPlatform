@@ -6,7 +6,6 @@ describe("getCourse", () => {
   test("getCourse by ID success", async () => {
     const mock = jest.spyOn(objRepository, "getCourseByIdDB");
     mock.mockResolvedValue([{ id: 1, course: "course", description: "desc" }]);
-
     const response = await getCourseById(1);
     expect(mock).toHaveBeenCalled();
     expect(mock).toHaveBeenCalledWith(1);
@@ -17,8 +16,10 @@ describe("getCourse", () => {
     mock.mockResolvedValue([]);
     try {
       await getCourseById(1);
-    } catch (error: any) {
-      expect(error.message).toBe("course id not found");
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        expect(error.message).toBe("course id not found");
+      }
     }
   });
 });
@@ -44,8 +45,10 @@ describe("getAllCourses", () => {
     mock.mockResolvedValue([]);
     try {
       await getAllCourses();
-    } catch (error: any) {
-      expect(error.message).toBe("empty courses data");
+    } catch (error: unknown) {
+      if (error instanceof Error) {
+        expect(error.message).toBe("empty courses data");
+      }
     }
   });
 });
