@@ -1,0 +1,66 @@
+.footer{
+  .footerTop {
+    padding: 40px 10px 20px;
+  
+    ul,
+    .contacts {
+      display: flex;
+      gap: 30px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 100%;
+      color: var(--secondaryText);
+  
+      li,
+      p {
+        font-weight: inherit;
+        font-size: inherit;
+      }
+    }
+  }
+  
+  .footerBottom {
+    padding: 25px 10px 45px;
+  
+    > div {
+      display: flex;
+      gap: 33px;
+    }
+  
+    p {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--secondaryText);
+  
+      span {
+        text-decoration: underline 1px var(--secondaryText);
+        font-weight: inherit;
+      }
+    }
+  
+    .githubIco {
+      background: no-repeat url("./assets/github.svg");
+      background-position: center;
+      background-size: contain;
+      width: 25px;
+      height: 20px;
+    }
+  
+    .gtIco {
+      background: no-repeat url("./assets/GT.svg");
+      background-position: center;
+      background-size: contain;
+      width: 30px;
+      height: 19px;
+    }
+  
+    .youtubeIco {
+      background: no-repeat url("./assets/youtube.svg");
+      background-position: center;
+      background-size: contain;
+      width: 25px;
+      height: 18px;
+    }
+  }
+  
+}
