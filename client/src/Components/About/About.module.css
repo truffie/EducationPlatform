@@ -1,0 +1,77 @@
+.about {
+  padding: 95px 10px;
+  overflow: hidden;
+
+  .primaryColored {
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 24px;
+  }
+  h1{
+
+    width: 515px;
+  }
+    
+  
+  button {
+    margin-bottom: 48px;
+  }
+
+  .aboutImg {
+    background: url("./assets/chel.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+    width: 660px;
+    min-width: 250px;
+    height: 545px;
+
+    .aboutFlowerImg {
+      background: url("./assets/flower.svg");
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      display: block;
+      position: relative;
+      left: 55%;
+      width: 80%;
+      height: 571px;
+    }
+  }
+  .statsWrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: min-content;
+    align-items: center;
+  
+    .stats {
+      font-family: Dela Gothic One;
+      display: flex;
+      font-size: 40px;
+      line-height: 100%;
+      margin-bottom: 3px;
+  
+      &::before {
+        content: url("./assets/lightning.svg");
+        display: inline-block;
+        width: 24px;
+        height: 30px;
+        padding-right: 10px;
+        position: relative;
+        bottom: 5px;
+      }
+      &::after {
+        content: "+";
+        font-family: inherit;
+        color: var(--primary);
+      }
+    }
+    .StatsSubtitle {
+      font-weight: 600;
+      line-height: 140%;  
+      color: #585858;
+    }
+  }
+}
