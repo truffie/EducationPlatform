@@ -5,7 +5,6 @@ let id: number;
 describe("course controller POST & GET", () => {
   it("POST/course", async () => {
     const res = await req(app).post("/course/").send({ course: "javascript 5.0", description: "javascript" });
-    id = res.body[0].id;
     expect(res.body[0].course).toBe("javascript 5.0");
     expect(res.body[0].description).toBe("javascript");
   });
