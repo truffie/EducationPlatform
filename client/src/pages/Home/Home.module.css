@@ -1,14 +1,9 @@
 .sectionWrapper {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
-.lineAccent {
-  border-bottom: 2px solid var(--accent);
-}
-.bgColored {
-  background-color: #f6f5f4;
-}
+
 .button {
   text-align: center;
   font-weight: 700;
@@ -27,6 +22,9 @@
     background-color: var(--secondaryBG);
   }
 }
+button.primaryColored{
+  background-color: #c3dce3;
+}
 .secondaryColored {
   color: var(--secondary);
 }
@@ -35,22 +33,19 @@
 }
 .Content {
   width: min-content;
-  .ContentText{
+  .ContentText {
     > * {
       margin-bottom: 30px;
     }
-    
   }
   .ContentHeader {
     font-family: Dela Gothic One;
     font-size: 48px;
     line-height: 100%;
     width: 480px;
-    &.mainHeader{
-       
-        font-size: 56px;
-        line-height: 120%;
-      
+    &.mainHeader {
+      font-size: 56px;
+      line-height: 120%;
     }
   }
   .ContentSubtitle {
@@ -61,78 +56,8 @@
     line-height: 140%;
   }
 }
-.layout2Columns {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.header {
-  .headerWrapper {
-    padding: 24px 10px;
 
-    .logo {
-      position: relative;
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 16px;
-      &::after {
-        display: block;
-        position: absolute;
-        left: 100%;
-        top: 0;
-        content: "";
-        height: 100%;
-        width: 2px;
-        margin-left: 28px;
-        background-color: var(--accent);
-      }
-    }
-    .signup {
-      background-color: var(--primary);
-      color: #fff;
-      padding: 13px 21px;
-      border-radius: 14px;
-    }
-    .login {
-      color: black;
-      background-color: #f6f5f4;
-      padding: 13px 21px;
-    }
-  }
-}
-.statsWrapper {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  width: fit-content;
-  align-items: center;
 
-  .stats {
-    &.ContentHeader {
-      font-size: 40px;
-      line-height: 100%;
-      margin-bottom: 3px;
-    }
-    &::before {
-      content: url("./assets/lightning.svg");
-      display: inline-block;
-      width: 24px;
-      height: 30px;
-      padding-right: 10px;
-      position: relative;
-      bottom: 5px;
-    }
-    &::after {
-      content: "+";
-      font-family: inherit;
-      color: var(--primary);
-    }
-  }
-  .ContentSubtitle {
-    font-size: 16px;
-    color: #585858;
-  }
-}
 .about {
   padding: 95px 10px;
   overflow: hidden;
@@ -147,7 +72,7 @@
       width: 515px;
     }
   }
-  .button {
+  button.primaryColored {
     margin-bottom: 48px;
   }
 
@@ -172,6 +97,42 @@
       width: 80%;
       height: 571px;
     }
+  }
+  
+}
+.statsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: min-content;
+  align-items: center;
+
+  .stats {
+    font-family: Dela Gothic One;
+    display: flex;
+    font-size: 40px;
+    line-height: 100%;
+    margin-bottom: 3px;
+
+    &::before {
+      content: url("./assets/lightning.svg");
+      display: inline-block;
+      width: 24px;
+      height: 30px;
+      padding-right: 10px;
+      position: relative;
+      bottom: 5px;
+    }
+    &::after {
+      content: "+";
+      font-family: inherit;
+      color: var(--primary);
+    }
+  }
+  .StatsSubtitle {
+    font-weight: 600;
+    line-height: 140%;  
+    color: #585858;
   }
 }
 .learn {
@@ -232,69 +193,5 @@
     background-position: center;
     width: 680px;
     height: 410px;
-  }
-}
-
-.footerTop {
-  padding: 40px 10px 20px;
-
-  ul,
-  .contacts {
-    display: flex;
-    gap: 30px;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 100%;
-    color: var(--secondaryText);
-
-    li,
-    p {
-      font-weight: inherit;
-      font-size: inherit;
-    }
-  }
-}
-
-.footerBottom {
-  padding: 25px 10px 45px;
-
-  > div {
-    display: flex;
-    gap: 33px;
-  }
-
-  p {
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--secondaryText);
-
-    span {
-      text-decoration: underline 1px var(--secondaryText);
-      font-weight: inherit;
-    }
-  }
-
-  .githubIco {
-    background: no-repeat url("./assets/github.svg");
-    background-position: center;
-    background-size: contain;
-    width: 25px;
-    height: 20px;
-  }
-
-  .gtIco {
-    background: no-repeat url("./assets/GT.svg");
-    background-position: center;
-    background-size: contain;
-    width: 30px;
-    height: 19px;
-  }
-
-  .youtubeIco {
-    background: no-repeat url("./assets/youtube.svg");
-    background-position: center;
-    background-size: contain;
-    width: 25px;
-    height: 18px;
   }
 }
