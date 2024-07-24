@@ -10,9 +10,7 @@ export function About() {
           <div className={"Content"}>
             <p className={"primaryColored"}>E-COURSE PLATFORM</p>
             <div className={"ContentText"}>
-              <h1 className={`${"ContentHeader"} ${styles.mainHeader}`}>
-                Learning and teaching online, made easy.
-              </h1>
+              <h1 className={`${"ContentHeader"} ${styles.mainHeader}`}>Learning and teaching online, made easy.</h1>
               <p className={"ContentSubtitle"}>Any subject, in any language, on any device, for all ages!</p>
             </div>
             <Button className={"primaryColored"} value={"About platform"} path="/course" />
