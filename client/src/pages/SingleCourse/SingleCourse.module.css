@@ -1,0 +1,73 @@
+.mainWrapper {
+  display: flex;
+  justify-content: center;
+  padding: 100px 0;
+  gap: 10px;
+}
+
+.lesson {
+  display: flex;
+  align-items: center;
+  gap: 65px;
+  flex-direction: column;
+  border-radius: 14px;
+  background: #ffffff;
+  padding: 40px;
+}
+.lesson,
+.programm {
+  box-shadow: 0px 22.9px 45.8px -11.45px #34292714;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .image {
+    align-self: end;
+    background: url("./assets/books.svg") center no-repeat;
+    background-position: bottom;
+    width: 240px;
+    height: 150px;
+    background-size: contain;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    width: 280px;
+    gap: 12px;
+
+    p {
+      font: 600 16px Montserrat;
+      color: #757575;
+      line-height: 23px;
+    }
+  }
+}
+
+.programm {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 401px;
+  border-radius: 14px;
+  background: #ffffff;
+  padding: 40px 73.5px;
+}
+
+.programm ol {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  li {
+    text-transform: capitalize;
+    list-style-type: decimal;
+    font: 600 16px Montserrat;
+    color: #000000;
+  }
+}
