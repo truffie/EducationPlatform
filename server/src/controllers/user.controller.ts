@@ -1,8 +1,11 @@
 import express, { Request, Response } from "express";
-const route = express.Router();
+
 import { createUser, getUserById, getAllUsers, deleteUserById, updateUser } from "../service/user.service";
 import { iUser } from "../interfaces";
 import { buildResponse } from "../helper/response";
+
+const route = express.Router();
+
 route.get("/", async (_req, res: Response) => {
   try {
     const usersList = await getAllUsers();
@@ -49,6 +52,7 @@ route.delete("/:id", async (req: Request, res: Response) => {
     }
   }
 });
+
 route.put("/:id", async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
@@ -60,4 +64,5 @@ route.put("/:id", async (req: Request, res: Response) => {
     }
   }
 });
+
 export default route;
