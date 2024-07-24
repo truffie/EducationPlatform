@@ -4,25 +4,7 @@
   justify-content: space-between;
 }
 
-.button {
-  text-align: center;
-  font-weight: 700;
-  background-color: #fff;
-  border: none;
-  font-size: 16px;
-  line-height: 16px;
-  padding: 14px 22px;
-  border-radius: 100px;
-
-  &.primaryColored {
-    background-color: #c3dce3;
-  }
-
-  &.secondaryColored {
-    background-color: var(--secondaryBG);
-  }
-}
-button.primaryColored{
+button.primaryColored {
   background-color: #c3dce3;
 }
 .secondaryColored {
@@ -32,17 +14,16 @@ button.primaryColored{
   color: var(--primary);
 }
 .Content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
   width: min-content;
-  .ContentText {
-    > * {
-      margin-bottom: 30px;
-    }
-  }
+
   .ContentHeader {
     font-family: Dela Gothic One;
     font-size: 48px;
     line-height: 100%;
-    width: 480px;
+    width: 514px;
     &.mainHeader {
       font-size: 56px;
       line-height: 120%;
@@ -55,8 +36,10 @@ button.primaryColored{
     font-size: 18px;
     line-height: 140%;
   }
+  .button {
+    align-self: flex-start;
+  }
 }
-
 
 .about {
   padding: 95px 10px;
@@ -77,7 +60,7 @@ button.primaryColored{
   }
 
   .aboutImg {
-    background: url("./assets/chel.svg");
+    background: url('./assets/chel.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -87,7 +70,7 @@ button.primaryColored{
     height: 545px;
 
     .aboutFlowerImg {
-      background: url("./assets/flower.svg");
+      background: url('./assets/flower.svg');
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
@@ -98,7 +81,6 @@ button.primaryColored{
       height: 571px;
     }
   }
-  
 }
 .statsWrapper {
   display: flex;
@@ -115,7 +97,7 @@ button.primaryColored{
     margin-bottom: 3px;
 
     &::before {
-      content: url("./assets/lightning.svg");
+      content: url('./assets/lightning.svg');
       display: inline-block;
       width: 24px;
       height: 30px;
@@ -124,14 +106,14 @@ button.primaryColored{
       bottom: 5px;
     }
     &::after {
-      content: "+";
+      content: '+';
       font-family: inherit;
       color: var(--primary);
     }
   }
   .StatsSubtitle {
     font-weight: 600;
-    line-height: 140%;  
+    line-height: 140%;
     color: #585858;
   }
 }
@@ -143,7 +125,7 @@ button.primaryColored{
     justify-content: space-between;
 
     .learnImg {
-      background: url("./assets/girlWithBook.svg");
+      background: url('./assets/girlWithBook.svg');
       background-repeat: no-repeat;
       background-size: contain;
       background-position: center;
@@ -154,40 +136,73 @@ button.primaryColored{
   .ContentHeader {
     width: 500px;
   }
+
   .buttonsWrapper {
     display: flex;
     gap: 21px;
+    margin-top: 30px;
+    .primaryColored {
+      position: relative;
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        background: url('./assets/loudspeaker.svg') center no-repeat;
+        width: 172px;
+        height: 112px;
+        left: 0;
+        bottom: 35%;
+      }
+    }
+
+    .secondaryColored {
+      background-color: var(--secondaryBG);
+      position: relative;
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        background: url('./assets/sneakers.svg') center no-repeat;
+        background-size: contain;
+        width: 129px;
+        height: 112px;
+        right: 2px;
+        bottom: 35%;
+      }
+    }
+    .customButton {
+      border-radius: 14px;
+      width: 129px;
+      height: 112px;
+      line-height: 140px;
+    }
+    .customButton.primaryColored {
+      position: relative;
+      width: 172px;
+    }
   }
 }
-.customButton {
-  border-radius: 14px;
-  width: 129px;
-  height: 112px;
-  line-height: 140px;
-}
-.customButton.primaryColored {
-  position: relative;
-  width: 172px;
-}
+
 .textbook {
   padding: 25px 10px 0;
-
-  .textbookImg {
-    background: url("./assets/schoolgirl.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    position: relative;
-    right: 30px;
-    width: 400px;
-    height: 440px;
+  .sectionWrapper {
+    .textbookImg {
+      background: url('./assets/schoolgirl.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      position: relative;
+      right: 30px;
+      width: 400px;
+      height: 440px;
+    }
   }
 }
 
 .statistic {
   padding: 95px 10px;
   .statisticImg {
-    background: url("./assets/students.svg");
+    background: url('./assets/students.svg');
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
