@@ -1,5 +1,39 @@
-.content {
-  h1 {
-    margin-top: 83px;
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: inherit;
+  margin-top:87px;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 0 1rem;
+
+    input {
+      width: 519px;
+      height: 60px;
+      padding: 14.5px 20px;
+      border-radius: 2px;
+      border: 1px solid #ced4da;
+      font: 400 20px Montserrat;
+      color: #adb5bd;
+    }
+
+    button {
+      background-color: var(--primary);
+      color: #fff;
+    }
+  }
+
+  .image {
+    background-image: url("./assets/auth.svg");
+    width: 481px;
+    height: 320px;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 }
