@@ -1,18 +1,12 @@
 .button {
   text-align: center;
+  align-self: flex-start;
   font-weight: 700;
-  background-color: #fff;
+  background-color: #c3dce3;
   border: none;
   font-size: 16px;
   line-height: 16px;
   padding: 14px 22px;
   border-radius: 100px;
-  cursor:pointer;
-  &.primaryColored {
-    background-color: #c3dce3;
-  }
-
-  &.secondaryColored {
-    background-color: var(--secondaryBG);
-  }
+  cursor: default;
 }
