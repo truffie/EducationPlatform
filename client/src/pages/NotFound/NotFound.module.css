@@ -1,0 +1,41 @@
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.mainWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 60px;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+
+  h5 {
+    font: 700 16px;
+    color: #757575;
+  }
+
+  p {
+    font: 500 20px Montserrat;
+    color: #757575;
+  }
+
+  button {
+    margin-top: 8px;
+    background-color: var(--primary);
+    color: #fff;
+  }
+}
+.image {
+  background: url("./assets/ghost.svg") no-repeat center;
+  width: 394px;
+  height: 444px;
+  background-size: contain;
+}
