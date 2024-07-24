@@ -6,6 +6,7 @@
       font-weight: 600;
       font-size: 16px;
       line-height: 16px;
+      transition: scale 1s ease;
       &::after {
         display: block;
         position: absolute;
@@ -18,16 +19,21 @@
         background-color: var(--accent);
       }
     }
-    button.signup {
-      background-color: var(--primary);
-      color: #fff;
-      padding: 13px 21px;
-      border-radius: 14px;
-    }
-    button.login {
-      color: black;
-      background-color: #f6f5f4;
-      padding: 13px 21px;
+    button {
+      position: relative;
+      &.signup {
+        background-color: var(--primary);
+        color: #fff;
+        padding: 13px 21px;
+        border-radius: 14px;
+        z-index: 2;
+      }
+      &.login {
+        z-index: 1;
+        color: black;
+        background-color: #f6f5f4;
+        padding: 13px 21px;
+      }
     }
   }
 }
