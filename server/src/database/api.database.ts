@@ -1,4 +1,5 @@
 import pool from "../db";
+
 import { iUser } from "../interfaces";
 
 const authUserByEmailDB = async (email: string): Promise<iUser[]> => {
@@ -11,6 +12,8 @@ const authUserByEmailDB = async (email: string): Promise<iUser[]> => {
   } catch (error: any) {
     console.log(error.message);
     return error.message;
+  } finally {
+    client.release();
   }
 };
 
