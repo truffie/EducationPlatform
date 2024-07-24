@@ -65,6 +65,7 @@ const deleteUserByIdDB = async (id: number): Promise<iUser[]> => {
     client.release();
   }
 };
+
 const updateUserDB = async (id: number, body: iUser): Promise<iUser[]> => {
   const client = await pool.connect();
   try {
@@ -80,4 +81,5 @@ const updateUserDB = async (id: number, body: iUser): Promise<iUser[]> => {
     client.release();
   }
 };
+
 export { createUserDB, getUserByIdDB, getUserByEmailDB, getAllUsersDB, deleteUserByIdDB, updateUserDB };
