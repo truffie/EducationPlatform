@@ -4,7 +4,7 @@ import pool from "../db";
 const getAllCoursesDB = async (): Promise<iCourse[]> => {
   const client = await pool.connect();
   try {
-    const query = "select * from courses";
+    const query = "select * from courses order by id asc";
     const { rows } = await client.query(query);
     return rows;
   } catch (error: any) {
@@ -13,6 +13,7 @@ const getAllCoursesDB = async (): Promise<iCourse[]> => {
     client.release();
   }
 };
+
 const createCourseDB = async (course: string, description: string): Promise<iCourse[]> => {
   const client = await pool.connect();
   try {
@@ -70,6 +71,7 @@ const updateCourseDB = async (id: number, course: string, description: string): 
     client.release();
   }
 };
+
 const deleteCourseDB = async (id: number) => {
   const client = await pool.connect();
   try {
@@ -85,4 +87,5 @@ const deleteCourseDB = async (id: number) => {
     client.release();
   }
 };
+
 export { getAllCoursesDB, createCourseDB, getCourseByNameDB, getCourseByIdDB, updateCourseDB, deleteCourseDB };
